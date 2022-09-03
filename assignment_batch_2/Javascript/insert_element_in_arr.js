@@ -14,4 +14,33 @@ function insertElementInArr(arr) {
     return arr;
 }
 
-console.log(insertElementInArr(arr));
+// console.log(insertElementInArr(arr));
+
+
+
+// using for loop ******************************
+
+
+
+// program to insert an item at a specific index into an array
+
+function insertElement(arr,ele) {
+
+    // index to add to
+    let index = Math.floor(arr.length / 2);
+
+    // element that you want to add
+    let element = ele
+  
+    for (let i = arr.length; i > index; i--) {
+
+        //shift the elements that are greater than index
+        arr[i] = arr[i-1];
+    }
+
+    // insert element at given index
+    arr[index] = element;
+    return arr;
+}
+
+console.log(insertElement(arr,5));
