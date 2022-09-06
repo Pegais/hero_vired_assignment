@@ -3,7 +3,7 @@
 // splice()=>has parameters like this => splice(index,deletecount,addcount);
 // to add element ,keep delete count 0;
 
-let arr = ['a', 'b', 'd', 'e', 'f']
+let arr = [1,2,3,4,5]
 
 function insertElementInArr(arr) {
     let mid = Math.floor((arr.length / 2));
@@ -43,4 +43,4 @@ function insertElement(arr,ele) {
     return arr;
 }
 
-console.log(insertElement(arr,5));
+console.log(insertElement(arr,6));

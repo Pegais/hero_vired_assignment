@@ -21,6 +21,7 @@ let head = null;
 let next = null;
 let size = 0;
 
+
 // this function will create a node ,which will be inserted into the list
 // the node will have a value and next pointer to different node;
 // if node pointer has no node to point , it will have null value;
@@ -31,7 +32,6 @@ function create(value) {
     }
     return node;
 }
-
 
 function prepend(value) {
     // calling create funtion to create a node;
@@ -81,13 +81,6 @@ function append(value) {
     return list;
 }
 
-
-// append(30)
-// append(10)
-// append(20)
-// console.log(list);
-
-// this insert function is useful as it will check for sorted link list and insert the value;
 function insert(value) {
     let new_node = create(value);
     if (list.head == null || list.head.value >= new_node.value) {
@@ -104,42 +97,9 @@ function insert(value) {
     }
 }
 
-// Create a sorted linked list from an unsorted array
-let arr = [3, 4, 1, 2, 8, 0];
+insert(2)
+insert(3)
+insert(1)
+insert(4)
 
-// without using bubble sort,we will direclty insert in list and check at the same time;
-
-for (let index = 0; index < arr.length; index++) {
-    insert(arr[index])
-    
-}
-
-
-
-// check the list here if it is sorted or not
 console.log(list);
-
-
-
-
-// we will sort the array by using bubble sort and than insert the values in list;
-// function bubbleSort(arr) {
-//     let swapped;
-//    do {
-//        swapped = false;
-//        for (let i = 0; i < arr.length-1; i++) {
-//            if (arr[i] >arr[i + 1]) {
-//                let container;
-//                container = arr[i];
-//                arr[i] = arr[i + 1];
-//                arr[i + 1] = container;
-//                swapped = true;
-//            }
-//        }
-//     } while (swapped);
-//     return arr
-// }
-// let sortedArr = bubbleSort(arr);
-// for (let i = 0; i < sortedArr.length; i++){
-//     console.log(append(sortedArr[i]));
-// }

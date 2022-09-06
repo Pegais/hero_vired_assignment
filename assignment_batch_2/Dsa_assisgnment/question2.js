@@ -23,7 +23,7 @@ function rotate_password(n, round) {
         let input = prompt("please enter your elements of array");
         Arr[i]=input
     }
-    // FIRST WE TAKE THE ELEMENTS FROM LAST TILL THE NO OF ROUND GIVEN ;
+    // FIRST WE TAKE THE ELEMENTS FROM LAST TILL THE NO. OF ROUND GIVEN ;
     // WE REVERSE AND STORE THEM IN TEMP_ARR;
     for (let i = Arr.length; i > round; i--){
         temp[index] = Arr[i-1];
