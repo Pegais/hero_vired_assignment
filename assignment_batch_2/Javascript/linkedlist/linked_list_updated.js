@@ -16,8 +16,8 @@
 //     }
 // };
 
-const list = {};
-let head = null;
+const list = {head:null};
+
 let next = null;
 let size = 0;
 
@@ -52,10 +52,10 @@ function prepend(value) {
     return list;
 }
 
-// console.log(prepend(10));
-// console.log(prepend(20));
-// console.log(prepend(30));
-// console.log(prepend(40));
+// prepend(10)
+// prepend(20)
+// prepend(30)
+// prepend(40)
 
 
 // lets write a append method in list ;
@@ -80,10 +80,15 @@ function append(value) {
     // console.log(size);
     return list;
 }
-
+append(10);
+append(30);
+append(20);
 function insert(value) {
+
     let new_node = create(value);
+    console.log(new_node);
     if (list.head == null || list.head.value >= new_node.value) {
+        // console.log(head);
         new_node.next = list.head;
         list.head = new_node;
     } else {
@@ -97,9 +102,9 @@ function insert(value) {
     }
 }
 
-insert(2)
-insert(3)
-insert(1)
-insert(4)
+// insert(2)
+// insert(3)
+// insert(1)
+// insert(4)
 
 console.log(list);

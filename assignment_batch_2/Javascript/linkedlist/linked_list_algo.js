@@ -16,8 +16,8 @@
 //     }
 // };
 
-const list = {};
-let head = null;
+const list = {head:null};
+
 let next = null;
 let size = 0;
 
